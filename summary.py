@@ -21,10 +21,6 @@ for sentence_encoded in encoding_sentences:
     cosine_value = similarityComputation.compute_cosine(sentence_encoded, encoded_document[0])
     coverage_matrix.append(cosine_value)
 
-print(coverage_matrix)
-print(sentences_similarity)
-for s in sentences:
-    print(s + "\n")
 
 summarizationOptimizer = SummarizationOptimizer()
 best_result = summarizationOptimizer.start_optimization(len(sentences), coverage_matrix, sentences_similarity, 0.4)
